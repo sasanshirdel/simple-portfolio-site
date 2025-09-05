@@ -2,17 +2,36 @@
 @import "fonts.css";
 @import "grid.css";
 
-:root {}
+:root {
+    --primary-color: #FDC435;
+    --app-gray: #F9FAFF;
+    --text-color: #25282B;
+
+    /* fonts */
+    --primary-font: "Nunito";
+    --primary-font--md: "Nunito Medium";
+    --secondary-font: "Nunito Bold";
+}
 
 
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
 body {
     font-size: 1.6rem;
     line-height: 1.6;
-    font-family: "Nunito";
+    font-family: var(--primary-font);
+    overflow-x: hidden;
+    background-color: var(--app-gray);
+    color: var(--text-color);
 }
 
 /* 
@@ -38,6 +57,21 @@ ul {
 
 */
 
+.home-btn {
+    width: 12rem;
+    height: 4.5rem;
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    border: .2rem solid transparent;
+}
+
+.home-btn--outline {
+    background-color: transparent;
+    border: .2rem solid var(--text-color);
+}
+
 
 /* 
 
@@ -53,3 +87,90 @@ ul {
 */
 
 /* 
+==========
+  Header
+==========
+*/
+
+.header {
+    padding-top: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__brand {
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+}
+
+.menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu__item {}
+
+.menu__link {}
+
+/* 
+==========
+   Main
+==========
+*/
+
+.main {}
+
+/* 
+==================
+   Home section
+==================
+*/
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__content {
+    max-width: 40%;
+    padding-top: 5rem;
+}
+
+.home__job {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+}
+
+.home__title {
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.hoem__description {
+    max-width: 32rem;
+}
+
+.home__links {
+    margin-top: 4rem;
+}
+
+.home__banner {
+    position: absolute;
+    top: -4rem;
+    right: -12rem;
+    z-index: -1;
+}
+
+.home__img {
+    width: 100%;
+    height: 100%;
+}
